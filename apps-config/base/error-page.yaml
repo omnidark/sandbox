@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: error-page
+  name: error-page-s
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,12 +9,12 @@ metadata:
     argocd.argoproj.io/manifest-generate-paths: .  
 spec:
   destination:
-    namespace: prod
-    server: https://kubernetes.default.svc
-  project: prod-tenant
+    namespace: dev
+    server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
+  project: tenant
   source:
     path: error-page
-    repoURL: https://github.com/VirtoCommerce/vc-composer-deploy
+    repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
   syncPolicy:
     automated:

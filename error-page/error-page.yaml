@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment-error-page
+  name: nginx-deployment-error-page-s
 spec:
   selector:
     matchLabels:
-      app: error-page
+      app: error-page-s
   replicas: 1
   template:
     metadata:
       labels:
-        app: error-page
+        app: error-page-s
     spec:
       containers:
       - name: nginx-error-page
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: error-page
+  name: error-page-s
 spec:
   type: ClusterIP
   ports:
   - port: 80
   selector:
-    app: error-page
+    app: error-page-s
