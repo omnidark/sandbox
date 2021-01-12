@@ -14,7 +14,7 @@ spec:
   project: tenant
   source:
     path: sand-box-app/overlays/dev
-    repoURL: https://github.com/VirtoCommerce/vc-composer-deploy
+    repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
   syncPolicy:
     automated:
