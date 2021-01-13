@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment-error-page-s
 spec:
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: error-page-s
