@@ -23,13 +23,6 @@ spec:
           #     memory: "256Mi"
           #   limits:
           #     memory: "512Mi"
-          volumeMounts:
-            - mountPath: "/opt/virtocommerce/platform/shared"
-              name: shared
-      volumes:
-      - name: shared
-        persistentVolumeClaim:
-          claimName: shared-volume
   strategy:
     rollingUpdate:
       maxSurge: 1
