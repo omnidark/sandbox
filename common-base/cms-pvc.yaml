@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: cms-content-blob-volume
+  name: cms-content-volume
   annotations:
     volume.beta.kubernetes.io/storage-class: blob-premium
 spec:
