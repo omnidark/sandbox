@@ -10,6 +10,9 @@ patchesStrategicMerge:
 - ingress-https.yaml
 - ingress.yaml
 
+resources:
+- ../../common-base
+
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
   newName: docker.pkg.github.com/virtocommerce/vc-platform/platform

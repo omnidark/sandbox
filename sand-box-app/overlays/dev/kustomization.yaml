@@ -5,6 +5,4 @@ namePrefix: sandbox-
 commonLabels:
   instance: sandbox
 
-resources:
-- ../../../common-base
 - ../../resources
