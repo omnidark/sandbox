@@ -9,7 +9,6 @@ resources:
 - ../../resources
 
 vars:
-  type: ingestor
   env:
     path: env.yml
     type: text/yaml
