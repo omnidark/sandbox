@@ -11,7 +11,10 @@ resources:
 configMapGenerator:
 - name: db-config
   literals:
-    - VC_DB_HOST=test.com
+    - VC_DB_HOST=vc-dev-dbserver.database.windows.net
+    - VC_DB=vc-prod-dbserver
+    - VC_DB_POOL=vc-dev-elasticpool
+    - VC_DB_USER=virto
 
 vars:
 - name: VC_DB_HOST
@@ -21,3 +24,25 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data['VC_DB_HOST']
+- name: VC_DB
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB']
+- name: VC_DB_POOL
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_POOL']
+- name: VC_DB_USER
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_USER']
+
