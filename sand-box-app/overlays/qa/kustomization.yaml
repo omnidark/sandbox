@@ -11,5 +11,5 @@ resources:
 vars:
   type: ingestor
   env:
-    path: env.yaml
+    path: ./env.yaml
     type: text/yaml
