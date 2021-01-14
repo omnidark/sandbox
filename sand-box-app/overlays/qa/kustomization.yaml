@@ -9,5 +9,7 @@ resources:
 - ../../resources
 
 vars:
-- name: VC_DB_HOST
-  defaultValue: test.com
+  type: ingestor
+  env:
+    path: env.yml
+    type: text/yaml
