@@ -5,15 +5,6 @@ namePrefix: sandbox-
 commonLabels:
   instance: sandbox
 
-patchesStrategicMerge:
-- ../../resources/storefront-deploy.yaml
-- ../../resources/platform-deploy.yaml
-- ../../resources/deployment-cm.yaml
-- ../../resources/storefront-cm.yaml
-- ../../resources/platform-cm.yaml
-- ../../resources/ingress-https.yaml
-- ../../resources/ingress.yaml
-
 resources:
 - ../../../common-base
 - ../../resources
