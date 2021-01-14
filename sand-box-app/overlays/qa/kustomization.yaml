@@ -10,4 +10,4 @@ resources:
 
 vars:
 - name: VC_DB_HOST
-  defaultValue: test.com
+  value: test.com
