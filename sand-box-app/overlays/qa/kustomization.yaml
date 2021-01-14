@@ -7,3 +7,7 @@ commonLabels:
 
 resources:
 - ../../resources
+
+vars:
+- name: VC_DB_HOST
+  value: test.com
