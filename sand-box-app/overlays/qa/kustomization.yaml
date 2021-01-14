@@ -8,8 +8,16 @@ commonLabels:
 resources:
 - ../../resources
 
+configMapGenerator:
+- name: db-config
+  literals:
+    - VC_DB_HOST=test.com
+
 vars:
-  type: ingestor
-  env:
-    path: ./env.yaml
-    type: text/yaml
+- name: VC_DB_HOST
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_HOST']
