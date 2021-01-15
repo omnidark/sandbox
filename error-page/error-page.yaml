@@ -18,6 +18,8 @@ spec:
         image: kkisilevsky/nginx_error_page
         ports:
         - containerPort: 80
+      nodeSelector:
+        agentpool: applications
 ---
 apiVersion: v1
 kind: Service

@@ -4,5 +4,6 @@ nameSuffix: -dev
 resources:
 - ../../base
 - loadtest-app.yaml
+- error-page.yaml
 patchesStrategicMerge:
 - sandbox-app.yaml
