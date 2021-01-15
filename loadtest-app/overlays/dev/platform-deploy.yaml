@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: platform
 spec:
+  serviceAccountName: default
   replicas: 1
   template:
     metadata:
