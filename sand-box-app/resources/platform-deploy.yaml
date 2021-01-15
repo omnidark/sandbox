@@ -23,6 +23,8 @@ spec:
           #     memory: "256Mi"
           #   limits:
           #     memory: "512Mi"
+      nodeSelector:
+        agentpool: applications
   strategy:
     rollingUpdate:
       maxSurge: 1
