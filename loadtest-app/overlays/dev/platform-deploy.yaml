@@ -12,6 +12,7 @@ spec:
           vault.hashicorp.com/agent-limits-cpu: "55m"   
     spec:
       initContainers:
+        - name: init-platform
           command:
             - "/bin/sh"
             - "-c"
