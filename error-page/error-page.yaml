@@ -19,7 +19,7 @@ spec:
         ports:
         - containerPort: 80
       nodeSelector:
-        agentpool: applications
+        agentpool: primary
 ---
 apiVersion: v1
 kind: Service
