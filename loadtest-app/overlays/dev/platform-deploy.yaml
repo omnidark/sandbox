@@ -11,10 +11,9 @@ spec:
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "55m"   
     spec:
-      serviceAccountName: default
       initContainers:
         - name: init-platform
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           command:
             - "/bin/sh"
             - "-c"
@@ -35,6 +34,4 @@ spec:
               memory: "4096Mi"
       nodeSelector:
         agentpool: applications
-      imagePullSecrets:
-      - name: regcred
           
