@@ -3,5 +3,6 @@ kind: Kustomization
 nameSuffix: -dev
 resources:
 - ../../base
+- loadtest-app.yaml
 patchesStrategicMerge:
 - sandbox-app.yaml
