@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: loadtest-app
+  name: loadtest
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,12 +9,12 @@ metadata:
     argocd.argoproj.io/manifest-generate-paths: . ; ../../../common-base/platform-loadtest 
 spec:
   destination:
-    namespace: dev
+    namespace: develop
     server: https://kubernetes.default.svc
   project: tenant
   source:
     path: loadtest-app/overlays/dev
-    repoURL: https://github.com/virtocommerce/vc-deploy-apps
+    repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
   syncPolicy:
     automated:
