@@ -14,6 +14,7 @@ spec:
       serviceAccountName: default
       initContainers:
         - name: init-platform
+          imagePullPolicy: Always
           command:
             - "/bin/sh"
             - "-c"
