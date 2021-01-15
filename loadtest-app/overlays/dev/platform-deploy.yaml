@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: platform
 spec:
-  serviceAccountName: default
   replicas: 1
   template:
     metadata:
@@ -12,6 +11,7 @@ spec:
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "55m"   
     spec:
+      serviceAccountName: default
       initContainers:
         - name: init-platform
           command:
