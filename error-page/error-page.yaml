@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: error-page-s
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
