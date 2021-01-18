@@ -20,7 +20,8 @@ patches:
 - patch: |-
     - op: add
       path: /spec/template/spec/nodeSelector
-      value: "environmnet=trial"
+      value: 
+        environmnet:trial
   target:
     group: apps
     version: v1
