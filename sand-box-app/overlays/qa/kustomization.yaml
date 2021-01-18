@@ -19,8 +19,8 @@ configMapGenerator:
 patches:
 - patch: |-
     - op: add
-      path: /spec/template/spec/nodeSelector
-      value: "environmnet: trial"
+      path: /spec/template/spec/nodeSelector/environmnet
+      value: trial
   target:
     group: apps
     version: v1
