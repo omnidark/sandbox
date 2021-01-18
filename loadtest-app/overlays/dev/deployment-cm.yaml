@@ -126,5 +126,10 @@ data:
     "Id": "VirtoCommerce.ExperienceApi",
     "Repository": "VirtoCommerce/vc-module-experience-api",
     "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/0.19.0/VirtoCommerce.ExperienceApi_0.19.0.zip"
-    }  
+    },
+    {
+      "Id": "VirtoCommerce.Marketing",
+      "Repository": "VirtoCommerce/vc-module-marketing",
+      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-marketing/releases/download/3.13.0/VirtoCommerce.Marketing_3.13.0.zip"
+    } 
    ] 
