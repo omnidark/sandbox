@@ -19,7 +19,7 @@ configMapGenerator:
 patches:
 - patch: |-
     - op: add
-      path: /spec/template/spec/nodeSelector
+      path: /spec/nodeSelector
       value: 
         environmnet:trial
   target:
