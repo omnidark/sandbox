@@ -3,6 +3,5 @@ kind: Kustomization
 nameSuffix: -qa
 resources:
 - ../../base
-- error-page.yaml
 patchesStrategicMerge:
 - sandbox-app.yaml
