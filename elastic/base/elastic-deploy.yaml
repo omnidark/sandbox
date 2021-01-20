@@ -21,9 +21,6 @@ spec:
       spec:
         containers:
         - name: elasticsearch
-          env:
-          - name: ES_JAVA_OPTS
-            value: -Xms2g -Xmx2g
           resources:
             requests:
               memory: 1750Mi
