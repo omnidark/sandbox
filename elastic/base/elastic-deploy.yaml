@@ -26,9 +26,11 @@ spec:
             value: -Xms2g -Xmx2g
           resources:
             requests:
-              memory: 2048Mi
+              memory: 1536Mi
+              cpu: 300m
             limits:
-              memory: 2048Mi
+              memory: 1536Mi
+              cpu: 300m
     volumeClaimTemplates:
       - metadata:
           name: elasticsearch-data
