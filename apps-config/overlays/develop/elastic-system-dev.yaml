@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: elastic-dev
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"  
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/omnidark/sandbox
+    targetRevision: HEAD
+    path: elastic/base
+  destination:
+    server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
+    namespace: elastic-system-dev
+  ignoreDifferences:
+  - group: core
+    kind: Secret
+    name: webhook-server-secret
+    namespace: elastic-system-dev
+    jsonPointers:
+    - /data
+    - /type
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

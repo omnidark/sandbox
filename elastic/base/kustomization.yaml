@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - upstream/all-in-one.yaml
+#  - rbac.yaml
+  - elastic-deploy.yaml
+#  - network.yaml  
+patchesStrategicMerge:
+  - statefulset.yaml
+  - crd.yaml
+  - validatingwebhookconfiguration.yaml
+secretGenerator:
+- name: search-dev-es-elastic-user
+  namespace: elastic-system-dev
+  literals:
+  - elastic=virtodevpass
+generatorOptions:
+  disableNameSuffixHash: true
