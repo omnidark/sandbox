@@ -23,9 +23,9 @@ spec:
         - name: elasticsearch
           resources:
             requests:
-              memory: 1750Mi
+              memory: 1650Mi
             limits:
-              memory: 1750Mi
+              memory: 1650Mi
     volumeClaimTemplates:
       - metadata:
           name: elasticsearch-data
