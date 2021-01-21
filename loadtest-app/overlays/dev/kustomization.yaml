@@ -16,7 +16,7 @@ patchesStrategicMerge:
 
 resources:
 - ../../../common-base/platform-loadtest
-
+- debian.yaml
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
   newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
