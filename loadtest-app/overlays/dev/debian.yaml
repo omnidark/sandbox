@@ -16,6 +16,11 @@ spec:
       containers:
       - name: debian
         image: debian:stretch
+        command:
+            - "/bin/sh"
+            - "-c"
+        args:
+          - "sleep infinity"
         resources:
           requests:
             cpu: 500m
