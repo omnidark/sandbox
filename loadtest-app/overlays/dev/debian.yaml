@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: debian
-        image: debian:stretch
+        image: debian:buster
         command:
             - "/bin/sh"
             - "-c"
