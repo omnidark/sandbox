@@ -20,3 +20,6 @@ images:
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: docker.pkg.github.com/virtocommerce/vc-demo-storefront/demo-storefront
   newTag: 1.7.0-alpha.963-vds-74-845e8180
+- name: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer
+  newName: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer
+  newTag: dev-test

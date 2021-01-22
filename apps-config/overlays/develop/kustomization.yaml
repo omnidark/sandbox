@@ -4,6 +4,7 @@ nameSuffix: -dev
 resources:
 # - ../../base
 - loadtest-app.yaml
+- sandbox-app.yaml
 #- error-page.yaml
 - elastic-system-dev.yaml
 # patchesStrategicMerge:
