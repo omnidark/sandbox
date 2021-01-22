@@ -16,6 +16,8 @@ spec:
           env:
             - name: VC_SAMPLE_DATA_DB
               value: webstore-platform_source
+        - name: init-platform
+          imagePullPolicy: Always
       containers:
         - name: vc-platform-web
           # resources:
