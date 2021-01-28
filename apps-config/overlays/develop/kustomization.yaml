@@ -3,7 +3,7 @@ kind: Kustomization
 nameSuffix: -dev
 resources:
 # - ../../base
-- loadtest-app.yaml
+#- loadtest-app.yaml
 - sandbox-app.yaml
 #- error-page.yaml
 - elastic-system-dev.yaml
