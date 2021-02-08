@@ -6,6 +6,6 @@ resources:
 #- loadtest-app.yaml
 - sandbox-app.yaml
 #- error-page.yaml
-- elastic-system-dev.yaml
+#- elastic-system-dev.yaml
 # patchesStrategicMerge:
 # - sandbox-app.yaml
