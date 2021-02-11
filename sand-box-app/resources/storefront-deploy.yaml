@@ -13,3 +13,10 @@ spec:
           volumeMounts:
             - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
               name: cms-content-data
+          resources:
+            requests:
+              cpu: 125m
+              memory: "256Mi"
+            limits:
+              cpu: 125m
+              memory: "512Mi"

@@ -30,11 +30,13 @@ spec:
             && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
       containers:
         - name: vc-platform-web
-          # resources:
-          #   requests:
-          #     memory: "256Mi"
-          #   limits:
-          #     memory: "512Mi"
+          resources:
+            requests:
+              cpu: 125m
+              memory: "256Mi"
+            limits:
+              cpu: 125m
+              memory: "512Mi"
       nodeSelector:
         agentpool: applications
   strategy:
