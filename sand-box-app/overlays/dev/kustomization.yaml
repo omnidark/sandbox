@@ -11,9 +11,9 @@ resources:
 configMapGenerator:
 - name: db-config
   literals:
-    - VC_DB_HOST=vc-prod-dbserver.database.windows.net
-    - VC_DB=vc-prod-dbserver
-    - VC_DB_POOL=vc-prod-elasticpool
+    - VC_DB_HOST=vc-dev-dbserver.database.windows.net
+    - VC_DB=vc-dev-dbserver
+    - VC_DB_POOL=vc-dev-elasticpool
     - VC_DB_USER=virto
 - name: vault-config
   literals:
