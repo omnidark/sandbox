@@ -17,7 +17,7 @@ configMapGenerator:
     - VC_DB_USER=virto
 - name: vault-config
   literals:
-    - VAULT_API_URL="http://vault-dev.vault-dev.svc.cluster.local:8200"
+    - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
 
 vars:
 - name: VC_DB_HOST
