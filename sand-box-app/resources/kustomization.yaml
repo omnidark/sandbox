@@ -8,6 +8,7 @@ patchesStrategicMerge:
 - storefront-cm.yaml
 - platform-cm.yaml
 - ingress-https.yaml
+- platform-secrets.yaml
 - ingress.yaml
 
 resources:
