@@ -4,4 +4,4 @@ metadata:
   name: ratelimit
 spec:
   rateLimit:
-    average: 20
+    average: 5
