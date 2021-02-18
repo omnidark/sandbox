@@ -15,8 +15,9 @@ spec:
     volumeAttributes:
       containername: sandbox-cms-content
       skuName: Premium_LRS
-    nodeStageSecretRef:
-      name: azure-secret
-      namespace: default
+    # nodeStageSecretRef:
+    #   name: azure-secret
+    #   namespace: default
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
+  storageClassName: "blob-premium"
