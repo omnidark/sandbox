@@ -13,7 +13,7 @@ spec:
     volumeHandle: sandboxer123
     fsType: ext4
     volumeAttributes:
-      containername: sandbox-cms-content
+      containername: nginx-blob
       skuName: Premium_LRS
     # nodeStageSecretRef:
     #   name: azure-secret
