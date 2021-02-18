@@ -9,7 +9,6 @@ patchesStrategicMerge:
 - platform-cm.yaml
 - ingress-https.yaml
 - platform-secrets.yaml
-- cms-pvc.yaml
 - ingress.yaml
 
 resources:
