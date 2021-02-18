@@ -49,7 +49,7 @@ spec:
         volumeMounts:
           - mountPath: /mnt/Modules
             name: modules-data
-          - mountPath: /mnt/cms-content sandbox-cms-content-volume
+          - mountPath: /mnt/cms-content
             name: sandbox-cms-content-data
       - name: init-sqldatabase
         image: mcr.microsoft.com/mssql-tools
