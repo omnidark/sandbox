@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sandbox-cms-content
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 200Mi
+  csi:
+    driver: blob.csi.azure.com
+    readOnly: false
+    volumeHandle: sandbox-cms-content-develop
+    fsType: ext4
+    volumeAttributes:
+      containername: sandbox-cms-content
+      skuName: Premium_LRS
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: blob-premium
+  volumeMode: Filesystem

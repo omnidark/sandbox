@@ -3,6 +3,7 @@ kind: Kustomization
 nameSuffix: -dev
 resources:
   - sandbox-app.yaml
+  - storage.yaml
 # - ../../base
 #- loadtest-app.yaml
 #- sandbox-app.yaml
