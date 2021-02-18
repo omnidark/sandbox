@@ -9,4 +9,4 @@ spec:
     requests:
       storage: 200Mi
   volumeName: sandbox-cms-content
-  storageClassName: ""
+  storageClassName: "blob-premium"
