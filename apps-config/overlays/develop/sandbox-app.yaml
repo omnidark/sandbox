@@ -16,7 +16,4 @@ spec:
     path: sand-box-app/overlays/dev
     repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
