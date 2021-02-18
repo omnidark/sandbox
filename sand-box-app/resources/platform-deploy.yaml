@@ -86,7 +86,7 @@ spec:
               cpu: 125m
               memory: "512Mi"
       nodeSelector:
-        agentpool: applications
+        agentpool: agentpool
   strategy:
     rollingUpdate:
       maxSurge: 1
