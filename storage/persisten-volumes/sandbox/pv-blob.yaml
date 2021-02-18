@@ -19,5 +19,4 @@ spec:
       name: azure-secret
       namespace: default
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: blob-premium
   volumeMode: Filesystem
