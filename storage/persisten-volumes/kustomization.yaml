@@ -1,3 +1,4 @@
 resources:
 - ./sandbox/pv-blob.yaml
 - ./sandbox/pvc-blob.yaml
+- ./sandbox/pod.yaml
