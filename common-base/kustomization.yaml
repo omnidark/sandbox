@@ -11,6 +11,7 @@ resources:
 - deployment-cm.yaml
 - ingress-https.yaml
 - middleware-redirect.yaml
+- storage.yaml
 
 configurations:
 - varconfig.yaml
