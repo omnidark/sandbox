@@ -32,8 +32,8 @@ spec:
         - containerPort: 80
         volumeMounts:
         - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
-          name: $(VC_INSTANCE)-cms-content-data
+          name: cms-content-data
       volumes:
-      - name: $(VC_INSTANCE)-cms-content-data
+      - name: cms-content-data
         persistentVolumeClaim:
-          claimName: $(VC_INSTANCE)-cms-content-volume
+          claimName: cms-content-volume
