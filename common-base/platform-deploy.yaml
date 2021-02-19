@@ -92,7 +92,7 @@ spec:
         - mountPath: "/opt/virtocommerce/platform/modules"
           name: modules-data
       volumes: 
-      - name: cms-content-data
+      - name: $(VAULT_API_URL)-cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
