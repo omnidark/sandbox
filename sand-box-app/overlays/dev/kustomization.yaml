@@ -32,6 +32,7 @@ patches:
       path: /spec/csi/volumeAttributes
       value: 
         containername: sandbox-cms-content
+        skuName: Premium_LRS
   target:
     version: v1
     kind: PersistentVolume

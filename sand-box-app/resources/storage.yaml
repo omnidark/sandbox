@@ -7,9 +7,7 @@ spec:
   - ReadWriteMany
   capacity:
     storage: 200Mi
-  csi:
-    volumeAttributes:
-      skuName: Premium_LRS
+  csi: {}
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: "blob-premium"
