@@ -50,7 +50,7 @@ spec:
           - mountPath: /mnt/Modules
             name: modules-data
           - mountPath: /mnt/cms-content
-            name: '$(VC_INSTANCE)-cms-content-data'
+            name: cms-content-data
       - name: init-sqldatabase
         image: mcr.microsoft.com/mssql-tools
         command:
@@ -88,13 +88,13 @@ spec:
         - containerPort: 80
         volumeMounts:
         - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
-          name: '$(VC_INSTANCE)-cms-content-data'
+          name: cms-content-data
         - mountPath: "/opt/virtocommerce/platform/modules"
           name: modules-data
       volumes: 
-      - name: '$(VC_INSTANCE)-cms-content-data'
+      - name: cms-content-data
         persistentVolumeClaim:
-          claimName: '$(VC_INSTANCE)-cms-content-volume'
+          claimName: cms-content-volume
       - name: modules-data
         emptyDir: {}     
   strategy:
