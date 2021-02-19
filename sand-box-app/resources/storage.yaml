@@ -8,9 +8,6 @@ spec:
   capacity:
     storage: 200Mi
   csi:
-    driver: blob.csi.azure.com
-    readOnly: false
-    fsType: ext4
     volumeAttributes:
       skuName: Premium_LRS
   persistentVolumeReclaimPolicy: Retain
