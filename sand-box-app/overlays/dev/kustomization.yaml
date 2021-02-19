@@ -18,6 +18,9 @@ configMapGenerator:
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
+- name: storage-config
+  literals:
+    - CONTAINER_NAME=sandbox-cms-content
 
 vars:
 - name: VC_DB_HOST
@@ -55,3 +58,10 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data['VAULT_API_URL']
+- name: CONTAINER_NAME
+  objref:
+    kind: ConfigMap
+    name: storage-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['CONTAINER_NAME']
