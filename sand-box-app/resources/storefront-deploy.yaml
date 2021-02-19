@@ -10,9 +10,6 @@ spec:
     spec:
         containers:
         - name: vc-storefront-web
-          volumeMounts:
-            - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
-              name: sandbox-cms-content-data
           resources:
             requests:
               cpu: 125m
