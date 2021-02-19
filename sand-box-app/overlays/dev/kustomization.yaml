@@ -18,20 +18,20 @@ configMapGenerator:
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
-- name: storage-config
-  literals:
-    - CONTAINER_NAME=sandbox-cms-content
 
 patches:
 - patch: |-
     - op: add
-      path: /spec/template/spec/nodeSelector
+      path: /spec/csi
       value: 
-        agentpool: $(CONTAINER_NAME)
+        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#sandbox-cms-content
+    - op: add
+      path: /spec/csi/volumeAttributes
+      value: 
+        containername: sandbox-cms-content
   target:
-    group: apps
     version: v1
-    kind: Deployment
+    kind: PersistentVolume
 
 vars:
 - name: VC_DB_HOST
@@ -69,10 +69,3 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data['VAULT_API_URL']
-- name: CONTAINER_NAME
-  objref:
-    kind: ConfigMap
-    name: storage-config
-    apiVersion: v1
-  fieldref:
-    fieldpath: data['CONTAINER_NAME']
