@@ -2,11 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: storefront
+  labels:
+    k8s-app: sandbox-storefront
 spec:
   template:
     metadata:
       annotations:
         reloader.stakater.com/search: "true"
+      labels:
+        k8s-app: sandbox-storefront
     spec:
         containers:
         - name: vc-storefront-web
