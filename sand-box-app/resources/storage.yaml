@@ -15,7 +15,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: cms-content-volume2
+  name: cms-content-volume
 spec:
   accessModes:
     - ReadWriteMany
