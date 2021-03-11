@@ -10,6 +10,7 @@ patchesStrategicMerge:
 - ingress-https.yaml
 - platform-secrets.yaml
 - ingress.yaml
+- storage.yaml
 
 resources:
 - ../../common-base
