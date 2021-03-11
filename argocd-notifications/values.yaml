@@ -34,7 +34,7 @@ secret:
     # grafana-apiKey:
     #   # For more information: https://argocd-notifications.readthedocs.io/en/stable/services/grafana/
 
-    # msteams-kubernetes: ZGVmcmRhc2Zz
+    # webhooks-github-token:
 
     # email-username:
     # email-password:
@@ -60,18 +60,18 @@ extraEnv: []
 notifiers:
 # For more information: https://argocd-notifications.readthedocs.io/en/stable/services/overview/
 
-  service.webhook.msteams: |
-    url: $msteams-kubernetes
+  service.slack: |
+    token: $slack-token
 
 podAnnotations: {}
 
-resources:
-  limits:
-    cpu: 100m
-    memory: 128Mi
-  requests:
-    cpu: 100m
-    memory: 128Mi
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -85,10 +85,11 @@ subscriptions:
   # For more information: https://argocd-notifications.readthedocs.io/en/stable/subscriptions/
 
   # # subscription for on-sync-status-unknown trigger notifications
-  - recipients:
-    - msteams
-    triggers: 
-    - on-deployed
+  # - recipients:
+  #   - slack:test2
+  #   - email:test@gmail.com
+  #   triggers:
+  #   - on-sync-status-unknown
   # # subscription restricted to applications with matching labels only
   # - recipients:
   #   - slack:test3
@@ -99,49 +100,44 @@ subscriptions:
 templates:
   # For more information: https://argocd-notifications.readthedocs.io/en/stable/templates/
 
-  template.app-deployed: |
-    webhook:
-      msteams:
-        method: POST 
-        body: |     
-          {
-            "@type": "MessageCard",
-            "@context": "http://schema.org/extensions",
-            "themeColor": "0076D7",
-            "summary": "{{.app.spec.destination.namespace}}/{{.app.metadata.name}} sync status is {{.app.status.sync.status}}",
-            "sections": [
-              {
-                "activityTitle": "{{.app.spec.destination.namespace}}/{{.app.metadata.name}} sync status is {{.app.status.sync.status}}",
-                "facts": [
-                  {
-                    "name": "Repository",
-                    "value": "{{.app.spec.source.repoURL}}"
-                  },
-                  {
-                    "name": "Synced at",
-                    "value": "{{.app.status.operationState.finishedAt}}"
-                  },
-                  {
-                    "name": "Sync status",
-                    "value": "{{.app.status.sync.status}}"
-                  }
-                ],
-                "markdown": true
-              }
-            ],
-            "potentialAction": [
-              {
-                "@type": "OpenUri",
-                "name": "Details",
-                "targets": [
-                  {
-                    "os": "default",
-                    "uri": "{{.context.argocdUrl}}/applications/{{.app.metadata.name}}?operation=true"
-                  }
-                ]
-              }
-            ]
-          }
+  # template.app-deployed: |
+  #   email:
+  #     subject: New version of an application {{.app.metadata.name}} is up and running.
+  #   message: |
+  #     {{if eq .serviceType "slack"}}:white_check_mark:{{end}} Application {{.app.metadata.name}} is now running new version of deployments manifests.
+  #   slack:
+  #     attachments: |
+  #       [{
+  #         "title": "{{ .app.metadata.name}}",
+  #         "title_link":"{{.context.argocdUrl}}/applications/{{.app.metadata.name}}",
+  #         "color": "#18be52",
+  #         "fields": [
+  #         {
+  #           "title": "Sync Status",
+  #           "value": "{{.app.status.sync.status}}",
+  #           "short": true
+  #         },
+  #         {
+  #           "title": "Repository",
+  #           "value": "{{.app.spec.source.repoURL}}",
+  #           "short": true
+  #         },
+  #         {
+  #           "title": "Revision",
+  #           "value": "{{.app.status.sync.revision}}",
+  #           "short": true
+  #         }
+  #         {{range $index, $c := .app.status.conditions}}
+  #         {{if not $index}},{{end}}
+  #         {{if $index}},{{end}}
+  #         {
+  #           "title": "{{$c.type}}",
+  #           "value": "{{$c.message}}",
+  #           "short": true
+  #         }
+  #         {{end}}
+  #         ]
+  #       }]
   # template.app-health-degraded: |
   #   email:
   #     subject: Application {{.app.metadata.name}} has degraded.
@@ -298,12 +294,12 @@ tolerations: []
 triggers:
   # For more information: https://argocd-notifications.readthedocs.io/en/stable/triggers/
 
-  trigger.on-deployed: |
-    - description: Application is synced and healthy. Triggered once per commit.
-      oncePer: app.status.sync.revision
-      send:
-      - app-deployed
-      when: app.status.operationState.phase in ['Succeeded'] and app.status.health.status == 'Healthy'
+  # trigger.on-deployed: |
+  #   - description: Application is synced and healthy. Triggered once per commit.
+  #     oncePer: app.status.sync.revision
+  #     send:
+  #     - app-deployed
+  #     when: app.status.operationState.phase in ['Succeeded'] and app.status.health.status == 'Healthy'
   # trigger.on-health-degraded: |
   #   - description: Application has degraded
   #     send:
