@@ -16,8 +16,8 @@ spec:
         - name: vc-storefront-web
           resources:
             requests:
-              cpu: 125m
+              cpu: 135m
               memory: "256Mi"
             limits:
-              cpu: 125m
+              cpu: 135m
               memory: "512Mi"
