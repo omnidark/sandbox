@@ -26,9 +26,9 @@ spec:
           envFrom:
           - configMapRef:
               name: deployment-cm 
-        volumeMounts:
-          - mountPath: /mnt/cms-content
-            name: cms-content-data
+          volumeMounts:
+            - mountPath: /mnt/cms-content
+              name: cms-content-data
         containers:
         - name: vc-storefront-web
           resources:
