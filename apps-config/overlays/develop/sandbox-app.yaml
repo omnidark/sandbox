@@ -7,8 +7,6 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/manifest-generate-paths: . ; ../../../common-base; ../../resources
-    notifications.argoproj.io/subscribe.on-health-degraded.msteams: ""
-    notifications.argoproj.io/subscribe.on-sync-failed.msteams: ""  
 spec:
   destination:
     namespace: develop
