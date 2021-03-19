@@ -12,7 +12,7 @@ spec:
     metadata:
       annotations:
         reloader.stakater.com/search: "true"
-        configmap.reloader.stakater.com/reload: "platform-cm,deployment-cm,platform-secret-configmap"
+        configmap.reloader.stakater.com/reload: "platform-cm,modules-cm,platform-secret-configmap"
         vault.hashicorp.com/agent-inject: "true"
         vault.hashicorp.com/agent-pre-populate-only: "true"
         vault.hashicorp.com/agent-configmap: $(VC_INSTANCE)-platform-secret-configmap   
@@ -41,7 +41,7 @@ spec:
           - name: MODULES_CONFIG
             valueFrom:
               configMapKeyRef:
-                name: deployment-cm
+                name: modules-cm
                 key: modules.json 
         volumeMounts:
           - mountPath: /mnt/Modules
