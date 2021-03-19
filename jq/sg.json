@@ -1,0 +1,261 @@
+{
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "Application",
+    "metadata": {
+        "annotations": {
+            "argocd.argoproj.io/sync-wave": "2",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"argoproj.io/v1alpha1\",\"kind\":\"Application\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/sync-wave\":\"2\"},\"labels\":{\"app.kubernetes.io/instance\":\"argo-config\",\"workflow\":\"managed\"},\"name\":\"secret-generator\",\"namespace\":\"argocd\"},\"spec\":{\"destination\":{\"namespace\":\"secret-generator\",\"server\":\"https://kubernetes.default.svc\"},\"project\":\"default\",\"source\":{\"chart\":\"kubernetes-secret-generator\",\"helm\":{\"parameters\":[{\"name\":\"secretLength\",\"value\":\"12\"},{\"name\":\"watchNamespace\",\"value\":\"\"}]},\"repoURL\":\"https://helm.mittwald.de\",\"targetRevision\":\"3.1.0\"}}}\n"
+        },
+        "creationTimestamp": "2021-03-16T11:54:02Z",
+        "generation": 16,
+        "labels": {
+            "app.kubernetes.io/instance": "argo-config",
+            "workflow": "managed"
+        },
+        "name": "secret-generator",
+        "namespace": "argocd",
+        "resourceVersion": "138419030",
+        "selfLink": "/apis/argoproj.io/v1alpha1/namespaces/argocd/applications/secret-generator",
+        "uid": "fc330d2e-6ef0-4b4a-b168-44f6717a0031"
+    },
+    "spec": {
+        "destination": {
+            "namespace": "secret-generator",
+            "server": "https://kubernetes.default.svc"
+        },
+        "project": "default",
+        "source": {
+            "chart": "kubernetes-secret-generator",
+            "helm": {
+                "parameters": [
+                    {
+                        "name": "secretLength",
+                        "value": "12"
+                    },
+                    {
+                        "name": "watchNamespace"
+                    }
+                ]
+            },
+            "repoURL": "https://helm.mittwald.de",
+            "targetRevision": "3.1.0"
+        }
+    },
+    "status": {
+        "health": {
+            "status": "Healthy"
+        },
+        "history": [
+            {
+                "deployStartedAt": "2021-03-16T11:54:06Z",
+                "deployedAt": "2021-03-16T11:54:16Z",
+                "id": 0,
+                "revision": "3.1.0",
+                "source": {
+                    "chart": "kubernetes-secret-generator",
+                    "helm": {
+                        "parameters": [
+                            {
+                                "name": "secretLength",
+                                "value": "12"
+                            },
+                            {
+                                "name": "watchNamespace"
+                            }
+                        ]
+                    },
+                    "repoURL": "https://helm.mittwald.de",
+                    "targetRevision": "3.1.0"
+                }
+            }
+        ],
+        "operationState": {
+            "finishedAt": "2021-03-16T11:54:16Z",
+            "message": "successfully synced (all tasks run)",
+            "operation": {
+                "initiatedBy": {
+                    "username": "xlonelysoul94@gmail.com"
+                },
+                "retry": {},
+                "sync": {
+                    "revision": "3.1.0",
+                    "syncStrategy": {
+                        "hook": {}
+                    }
+                }
+            },
+            "phase": "Succeeded",
+            "startedAt": "2021-03-16T11:54:06Z",
+            "syncResult": {
+                "resources": [
+                    {
+                        "group": "",
+                        "hookPhase": "Running",
+                        "kind": "ServiceAccount",
+                        "message": "serviceaccount/secret-generator-kubernetes-secret-generator created",
+                        "name": "secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "rbac.authorization.k8s.io",
+                        "hookPhase": "Running",
+                        "kind": "ClusterRole",
+                        "message": "clusterrole.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get list watch update] APIGroups:[] Resources:[secrets] ResourceNames:[] NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator configured. Warning:  apply should be used on resource created by either  create --save-config or  apply",
+                        "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "rbac.authorization.k8s.io",
+                        "hookPhase": "Running",
+                        "kind": "ClusterRoleBinding",
+                        "message": "clusterrolebinding.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator reconciled. reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount APIGroup: Name:secret-generator-kubernetes-secret-generator Namespace:secret-generator}. clusterrolebinding.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator configured. Warning:  apply should be used on resource created by either  create --save-config or  apply",
+                        "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "rbac.authorization.k8s.io",
+                        "hookPhase": "Running",
+                        "kind": "Role",
+                        "message": "role.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[create delete get] APIGroups:[] Resources:[configmaps] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[delete get] APIGroups:[] Resources:[pods] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get create] APIGroups:[monitoring.coreos.com] Resources:[servicemonitors] ResourceNames:[] NonResourceURLs:[]}. role.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator configured. Warning:  apply should be used on resource created by either  create --save-config or  apply",
+                        "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "rbac.authorization.k8s.io",
+                        "hookPhase": "Running",
+                        "kind": "RoleBinding",
+                        "message": "rolebinding.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator reconciled. reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount APIGroup: Name:secret-generator-kubernetes-secret-generator Namespace:secret-generator}. rolebinding.rbac.authorization.k8s.io/mittwald:secret-generator-kubernetes-secret-generator configured. Warning:  apply should be used on resource created by either  create --save-config or  apply",
+                        "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "apps",
+                        "hookPhase": "Running",
+                        "kind": "Deployment",
+                        "message": "deployment.apps/secret-generator-kubernetes-secret-generator created",
+                        "name": "secret-generator-kubernetes-secret-generator",
+                        "namespace": "secret-generator",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    }
+                ],
+                "revision": "3.1.0",
+                "source": {
+                    "chart": "kubernetes-secret-generator",
+                    "helm": {
+                        "parameters": [
+                            {
+                                "name": "secretLength",
+                                "value": "12"
+                            },
+                            {
+                                "name": "watchNamespace"
+                            }
+                        ]
+                    },
+                    "repoURL": "https://helm.mittwald.de",
+                    "targetRevision": "3.1.0"
+                }
+            }
+        },
+        "reconciledAt": "2021-03-16T11:54:16Z",
+        "resources": [
+            {
+                "kind": "ServiceAccount",
+                "name": "secret-generator-kubernetes-secret-generator",
+                "namespace": "secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "apps",
+                "health": {
+                    "status": "Healthy"
+                },
+                "kind": "Deployment",
+                "name": "secret-generator-kubernetes-secret-generator",
+                "namespace": "secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "rbac.authorization.k8s.io",
+                "kind": "ClusterRole",
+                "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "rbac.authorization.k8s.io",
+                "kind": "ClusterRoleBinding",
+                "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "rbac.authorization.k8s.io",
+                "kind": "Role",
+                "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                "namespace": "secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "rbac.authorization.k8s.io",
+                "kind": "RoleBinding",
+                "name": "mittwald:secret-generator-kubernetes-secret-generator",
+                "namespace": "secret-generator",
+                "status": "Synced",
+                "version": "v1"
+            }
+        ],
+        "sourceType": "Helm",
+        "summary": {
+            "images": [
+                "quay.io/mittwald/kubernetes-secret-generator:v3.1.0"
+            ]
+        },
+        "sync": {
+            "comparedTo": {
+                "destination": {
+                    "namespace": "secret-generator",
+                    "server": "https://kubernetes.default.svc"
+                },
+                "source": {
+                    "chart": "kubernetes-secret-generator",
+                    "helm": {
+                        "parameters": [
+                            {
+                                "name": "secretLength",
+                                "value": "12"
+                            },
+                            {
+                                "name": "watchNamespace"
+                            }
+                        ]
+                    },
+                    "repoURL": "https://helm.mittwald.de",
+                    "targetRevision": "3.1.0"
+                }
+            },
+            "revision": "3.1.0",
+            "status": "Synced"
+        }
+    }
+}
