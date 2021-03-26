@@ -56,7 +56,7 @@ spec:
           args:
             - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
             && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
-            && ls -l /mnt/Modules/*/VirtoCommerce.WebHooks"
+            && ls -l /mnt/Modules/*/VirtoCommerce.WebHooks/bin"
         - name: init-dbuser
           image: mcr.microsoft.com/mssql-tools
           command:
