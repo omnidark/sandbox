@@ -1,5 +1,5 @@
 resources:
-#- modules-pvc.yaml
+- modules-pvc.yaml
 - ingress.yaml
 - platform-cm.yaml
 - platform-deploy.yaml
