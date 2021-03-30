@@ -15,7 +15,6 @@ patchesStrategicMerge:
 resources:
 - ../../common-base
 - rate-limit.yaml
-- modules-pvc.yaml
 
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
