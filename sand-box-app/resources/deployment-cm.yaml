@@ -17,7 +17,7 @@ metadata:
   labels:
     init-platform: workflow
 data:
-  modules.json: |
+  modules_json: |
    [
     {
       "Id": "VirtoCommerce.Core",
