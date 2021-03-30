@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     namespace: develop
-    server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
+    server: https://kubernetes.default.svc
   project: tenant
   source:
     path: sand-box-app/overlays/dev
