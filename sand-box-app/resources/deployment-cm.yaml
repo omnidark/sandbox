@@ -203,10 +203,5 @@ data:
       "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
       "Repository": "VirtoCommerce/vc-module-demo-customer-segments",
       "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.3.0-alpha.18.zip"
-    },
-    {
-      "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
-      "Repository": "VirtoCommerce/vc-module-demo-customer-segments",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-demo-customer-segments/releases/download/1.4.0/VirtoCommerce.DemoCustomerSegmentsModule_1.4.0.zip"
     }
    ]
