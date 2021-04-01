@@ -43,20 +43,19 @@ spec:
         - name: init-platform
           imagePullPolicy: Always
           image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:dev-test
-          resources:
-            requests:
-              cpu: 250m
-              memory: "256Mi"
-            limits:
-              cpu: 250m
-              memory: "512Mi"
+          # resources:
+          #   requests:
+          #     cpu: 250m
+          #     memory: "256Mi"
+          #   limits:
+          #     cpu: 250m
+          #     memory: "512Mi"
           command:
             - "/bin/sh"
             - "-c"
           args:
             - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
-            && ls -l /mnt/Modules/*/VirtoCommerce.WebHooks/bin"
+            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
         - name: init-dbuser
           image: mcr.microsoft.com/mssql-tools
           command:
