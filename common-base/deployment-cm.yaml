@@ -20,7 +20,7 @@ metadata:
   annotations:
     reloader.stakater.com/match: "true"
 data:
-  modules.json: |
+  modules_json: |
    [
     {
       "Id": "VirtoCommerce.Core",
