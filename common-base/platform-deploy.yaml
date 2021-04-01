@@ -42,7 +42,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: modules-cm
-                key: modules.json 
+                key: modules_json 
         volumeMounts:
           - mountPath: /mnt/Modules
             name: modules-data
