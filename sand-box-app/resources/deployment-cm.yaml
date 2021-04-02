@@ -16,8 +16,6 @@ metadata:
   name: modules-cm
   labels:
     init-platform: workflow
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
 data:
   modules_json: |
    [
