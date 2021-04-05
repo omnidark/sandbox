@@ -13,7 +13,8 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: modules-cm
+  generateName: modules-cm- 
+  #name: modules-cm
   labels:
     init-platform: workflow
 data:
