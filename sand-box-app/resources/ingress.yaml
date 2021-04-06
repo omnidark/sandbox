@@ -5,7 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik-dev
     traefik.ingress.kubernetes.io/router.middlewares: $(VC_NAMESPACE)-$(VC_INSTANCE)-https-redirect@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-ratelimit@kubernetescrd
-    ingress.kubernetes.io/custom-request-headers: l5d-dst-override:$(VC_INSTANCE)-storefront.$(VC_NAMESPACE).svc.cluster.local:80
+    ingress.kubernetes.io/custom-request-headers: l5d-dst-override:$(VC_INSTANCE)-storefront.$(VC_NAMESPACE).svc.cluster.local:80 l5d-dst-override:$(VC_INSTANCE)-platform.$(VC_NAMESPACE).svc.cluster.local:80
 spec:
   rules:
   - host: $(VC_STOREFRONT_SERVICE).$(VC_NAMESPACE).govirto.com
