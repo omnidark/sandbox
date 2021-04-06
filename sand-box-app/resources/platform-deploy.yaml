@@ -12,6 +12,7 @@ spec:
           vault.hashicorp.com/agent-configmap: "sandbox-platform-secret-configmap"
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "50m"
+          linkerd.io/inject: enabled
         labels:
           k8s-app: sandbox-platform   
     spec:

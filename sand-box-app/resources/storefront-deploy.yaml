@@ -9,6 +9,7 @@ spec:
     metadata:
       annotations:
         reloader.stakater.com/search: "true"
+        linkerd.io/inject: enabled
       labels:
         k8s-app: sandbox-storefront
     spec:
