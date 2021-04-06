@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: traefik-ingress-http
   annotations:
-    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.class: traefik-dev
     traefik.ingress.kubernetes.io/router.middlewares: $(VC_NAMESPACE)-$(VC_INSTANCE)-https-redirect@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-ratelimit@kubernetescrd
     ingress.kubernetes.io/custom-request-headers: l5d-dst-override:$(VC_INSTANCE)-storefront.$(VC_NAMESPACE).svc.cluster.local:80
 spec:
