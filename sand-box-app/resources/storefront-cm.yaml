@@ -10,4 +10,5 @@ data:
     VirtoCommerce__Endpoint__Url: http://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local
     VirtoCommerce__RequireHttps: "true"
     VirtoCommerce__DefaultStore: "B2B-Store"
+    VirtoCommerce__CacheEnabled: "true"
     
