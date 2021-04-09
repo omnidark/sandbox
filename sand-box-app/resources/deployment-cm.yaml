@@ -2,6 +2,8 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: deployment-cm
+  labels:
+    init-storefront: workflow
 data:
   ELECTRONICS_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-default-1.8.0-alpha.985.zip
   ELECTRONICS_THEME_LOCATION: /mnt/cms-content/Themes/Electronics
