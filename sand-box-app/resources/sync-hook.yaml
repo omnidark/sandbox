@@ -14,7 +14,7 @@ spec:
         command:
           - "curl"
           - "-d"
-          - "'{\"message\":\"App sync\"}'"
+          - "{\"message\":\"App sync\"}"
           - "-H"
           - "Content-Type: application/json"
           - "-X"
