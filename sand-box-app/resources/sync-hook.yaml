@@ -19,6 +19,6 @@ spec:
           - "Content-Type: application/json"
           - "-X"
           - "POST"
-          - "http://webhook-eventsource-svc.argo.svc.cluster.local/example"
+          - "http://webhook-eventsource-svc.argo.svc.cluster.local:12000/example"
       restartPolicy: Never
   backoffLimit: 2
