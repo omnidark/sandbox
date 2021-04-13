@@ -153,10 +153,5 @@
       "Id": "VirtoCommerce.BulkActionsModule",
       "Repository": "VirtoCommerce/vc-module-bulk-actions",
       "PackageUrl": "https://github.com/VirtoCommerce/vc-module-bulk-actions/releases/download/3.2.0/VirtoCommerce.BulkActionsModule_3.2.0.zip"
-    },
-    {
-      "Id": "VirtoCommerce.Quote",
-      "Repository": "VirtoCommerce/vc-module-quote",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-quote/releases/download/3.14.0/VirtoCommerce.Quote_3.14.0.zip"
     }
   ]
