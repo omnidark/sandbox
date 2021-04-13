@@ -34,4 +34,4 @@ configMapGenerator:
   - modules.json
 - name: test-deployment-config
   envs:
-    - deployment.env
+  - deployment.env
