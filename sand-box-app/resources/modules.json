@@ -133,10 +133,5 @@
       "Id": "VirtoCommerce.CatalogPublishing",
       "Repository": "VirtoCommerce/vc-module-catalog-publishing",
       "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-publishing/releases/download/3.7.0/VirtoCommerce.CatalogPublishing_3.7.0.zip"
-    },
-    {
-      "Id": "VirtoCommerce.PageBuilderModule",
-      "Repository": "VirtoCommerce/vc-module-pagebuilder",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-pagebuilder/releases/download/3.10.5/VirtoCommerce.PageBuilderModule_3.10.5.zip"
     }
   ]
