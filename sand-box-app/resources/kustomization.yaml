@@ -32,6 +32,12 @@ configMapGenerator:
 - name: test-modules-config
   files:
   - modules.json
+  options:
+    labels:
+      workflow: "generator"
 - name: test-deployment-config
   envs:
   - deployment.env
+  options:
+    labels:
+      workflow: "generator"
