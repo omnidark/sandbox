@@ -34,10 +34,10 @@ configMapGenerator:
   - modules.json
   options:
     labels:
-      workflow: "generator"
+      workflow: "generator-platform"
 - name: test-deployment-config
   envs:
   - deployment.env
   options:
     labels:
-      workflow: "generator"
+      workflow: "generator-storefront"
