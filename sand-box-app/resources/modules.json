@@ -143,15 +143,5 @@
       "Id": "VirtoCommerce.CatalogCsvImportModule",
       "Repository": "VirtoCommerce/vc-module-catalog-csv-import",
       "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-csv-import/releases/download/3.17.0/VirtoCommerce.CatalogCsvImportModule_3.17.0.zip"
-    },
-    {
-      "Id": "VirtoCommerce.Contentful",
-      "Repository": "VirtoCommerce/vc-module-contentful",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-contentful/releases/download/3.0.1-preview/VirtoCommerce.Contentful_3.0.1-preview.zip"
-    },
-    {
-      "Id": "VirtoCommerce.BulkActionsModule",
-      "Repository": "VirtoCommerce/vc-module-bulk-actions",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-bulk-actions/releases/download/3.2.0/VirtoCommerce.BulkActionsModule_3.2.0.zip"
     }
   ]
