@@ -11,6 +11,8 @@ patchesStrategicMerge:
 - platform-secrets.yaml
 - ingress.yaml
 - storage.yaml
+- modules.json
+- deployment.env
 
 resources:
 - ../../common-base
