@@ -11,8 +11,6 @@ patchesStrategicMerge:
 - platform-secrets.yaml
 - ingress.yaml
 - storage.yaml
-- modules.json
-- deployment.env
 
 resources:
 - ../../common-base
@@ -29,3 +27,11 @@ images:
 - name: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer
   newName: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer
   newTag: dev-test
+
+configMapGenerator:
+- name: test-modules-config
+  files:
+  - modules.json
+- name: test-deployment-config
+  envs:
+    - deployment.env
