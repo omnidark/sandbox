@@ -14,7 +14,7 @@ spec:
   project: tenant
   source:
     path: saas/overlays/dev
-    repoURL: https://github.com/virtocommerce/vc-deploy-apps
+    repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
   syncPolicy:
     automated:
