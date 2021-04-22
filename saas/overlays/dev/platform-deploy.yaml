@@ -7,21 +7,21 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
-        labels:
-          saas-app: saas-dev
-        annotations:
-          vault.hashicorp.com/agent-init-first: "true"
-          vault.hashicorp.com/agent-configmap: "saas-platform-secret-configmap"
-          vault.hashicorp.com/agent-requests-cpu: "25m"
-          vault.hashicorp.com/agent-limits-cpu: "55m"
-          vault.hashicorp.com/agent-inject: "true"
-          vault.hashicorp.com/agent-pre-populate-only: "true"
-          #linkerd.io/inject: enabled
-          #config.linkerd.io/proxy-log-level: debug
-          #config.linkerd.io/enable-debug-sidecar: "true"
-          #config.linkerd.io/opaque-ports: "80"
-          # config.linkerd.io/proxy-cpu-limit: "50m"
-          # config.linkerd.io/proxy-cpu-request: "5m"
+      labels:
+        saas-app: saas-dev
+      annotations:
+        vault.hashicorp.com/agent-init-first: "true"
+        vault.hashicorp.com/agent-configmap: "saas-platform-secret-configmap"
+        vault.hashicorp.com/agent-requests-cpu: "25m"
+        vault.hashicorp.com/agent-limits-cpu: "55m"
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-pre-populate-only: "true"
+        #linkerd.io/inject: enabled
+        #config.linkerd.io/proxy-log-level: debug
+        #config.linkerd.io/enable-debug-sidecar: "true"
+        #config.linkerd.io/opaque-ports: "80"
+        # config.linkerd.io/proxy-cpu-limit: "50m"
+        # config.linkerd.io/proxy-cpu-request: "5m"
     spec:
       terminationGracePeriodSeconds: 180
       affinity:
