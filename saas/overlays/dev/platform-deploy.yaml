@@ -7,6 +7,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+        labels:
+          saas-app: saas-dev
         annotations:
           vault.hashicorp.com/agent-init-first: "true"
           vault.hashicorp.com/agent-configmap: "saas-platform-secret-configmap"
@@ -20,8 +22,6 @@ spec:
           #config.linkerd.io/opaque-ports: "80"
           # config.linkerd.io/proxy-cpu-limit: "50m"
           # config.linkerd.io/proxy-cpu-request: "5m"
-        labels:
-          saas-app: saas-dev
     spec:
       terminationGracePeriodSeconds: 180
       affinity:
