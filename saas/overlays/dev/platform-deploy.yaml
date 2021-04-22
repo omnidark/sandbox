@@ -20,8 +20,8 @@ spec:
           #config.linkerd.io/opaque-ports: "80"
           # config.linkerd.io/proxy-cpu-limit: "50m"
           # config.linkerd.io/proxy-cpu-request: "5m"
-          labels:
-            saas-app: saas-dev
+        labels:
+          saas-app: saas-dev
     spec:
       terminationGracePeriodSeconds: 180
       affinity:
