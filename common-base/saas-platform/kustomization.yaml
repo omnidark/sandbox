@@ -6,6 +6,7 @@ resources:
 - platform-service.yaml
 - storage.yaml
 - platform-secrets.yaml
+- modules-pvc.yaml
 
 configurations:
 - varconfig.yaml
