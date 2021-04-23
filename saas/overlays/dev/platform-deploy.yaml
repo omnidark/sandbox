@@ -9,6 +9,7 @@ spec:
     metadata:
       labels:
         saas-app: saas-dev
+        updated: now
       annotations:
         argocd.argoproj.io/compare-options: IgnoreExtraneous
         vault.hashicorp.com/agent-init-first: "true"
