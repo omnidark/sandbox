@@ -4,7 +4,6 @@ resources:
 - platform-cm.yaml
 - platform-deploy.yaml
 - platform-service.yaml
-- deployment-cm.yaml
 - storage.yaml
 - platform-secrets.yaml
 
