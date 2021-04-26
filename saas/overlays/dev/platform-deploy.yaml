@@ -43,6 +43,9 @@ spec:
           envFrom:
           - configMapRef:
               name: platform-cm
+          env:
+          - name: UPDATE
+            value: "false"
           command:
               - "/bin/bash"
               - "-c"
