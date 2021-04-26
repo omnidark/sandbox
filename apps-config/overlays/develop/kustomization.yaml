@@ -1,13 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  #- sandbox-app.yaml
   - saas-app.yaml
-  #- storage.yaml
-# - ../../base
-#- loadtest-app.yaml
-#- sandbox-app.yaml
-#- error-page.yaml
-#- elastic-system-dev.yaml
-# patchesStrategicMerge:
-# - sandbox-app.yaml
+  - saas-template-config.yaml

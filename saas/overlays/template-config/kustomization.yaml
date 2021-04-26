@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: dev
+namePrefix: saas-
+
+configMapGenerator:
+- name: modules-config
+  files:
+  - modules.json
+  options:
+    labels:
+      workflow: "generator-platform"
+
+resources:
+- modules-pvc.yaml
+- sync-hook.yaml
