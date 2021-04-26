@@ -79,7 +79,8 @@ spec:
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: modules-volume
   strategy:
     blueGreen:
       activeService: platform
