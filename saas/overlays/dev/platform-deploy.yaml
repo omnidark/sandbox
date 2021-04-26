@@ -11,7 +11,6 @@ spec:
         saas-app: saas-dev
         updated: today
       annotations:
-        argocd.argoproj.io/compare-options: IgnoreExtraneous
         vault.hashicorp.com/agent-init-first: "true"
         vault.hashicorp.com/agent-configmap: "saas-platform-secret-configmap"
         vault.hashicorp.com/agent-requests-cpu: "25m"
