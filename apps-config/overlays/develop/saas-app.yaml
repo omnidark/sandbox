@@ -20,8 +20,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-  - group: argoproj.io/v1alpha1
-    kind: Rollout
-    jsonPointers:
-    - /spec/template/metada/labels/updated
