@@ -12,6 +12,9 @@ spec:
       - name: sync
         image: curlimages/curl
         command:
+          - "/bin/sh"
+          - "-c"
+        args:
           - "echo OK"
       restartPolicy: Never
   backoffLimit: 2
