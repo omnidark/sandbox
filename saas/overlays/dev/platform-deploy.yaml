@@ -43,6 +43,8 @@ spec:
           envFrom:
           - configMapRef:
               name: platform-cm
+          - configMapRef:
+              name: modules-config
           env:
           - name: UPDATE
             value: "false"
