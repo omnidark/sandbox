@@ -8,6 +8,7 @@ metadata:
 spec:
   template:
     spec:
+      restartPolicy: Never
       containers:
       - name: modules-installer
         image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
