@@ -82,7 +82,7 @@ spec:
           claimName: cms-content-volume
       - name: modules-data
         persistentVolumeClaim:
-          claimName: modules-volume
+          claimName: saas-modules-volume
   strategy:
     blueGreen:
       activeService: platform
