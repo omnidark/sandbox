@@ -135,11 +135,6 @@
     "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-publishing/releases/download/3.8.0/VirtoCommerce.CatalogPublishing_3.8.0.zip"
   },
   {
-    "Id": "VirtoCommerce.PageBuilderModule",
-    "Repository": "VirtoCommerce/vc-module-pagebuilder",
-    "PackageUrl": "https://github.com/VirtoCommerce/vc-module-pagebuilder/releases/download/3.10.5/VirtoCommerce.PageBuilderModule_3.10.5.zip"
-  },
-  {
     "Id": "VirtoCommerce.CatalogCsvImportModule",
     "Repository": "VirtoCommerce/vc-module-catalog-csv-import",
     "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-csv-import/releases/download/3.17.0/VirtoCommerce.CatalogCsvImportModule_3.17.0.zip"
