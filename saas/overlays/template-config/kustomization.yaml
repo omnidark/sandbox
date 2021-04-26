@@ -8,9 +8,9 @@ configMapGenerator:
 - name: modules-config
   files:
   - modules.json
-  options:
-    labels:
-      workflow: "generator-platform"
+  # options:
+  #   labels:
+  #     workflow: "generator-platform"
 
 resources:
 - modules-pvc.yaml
