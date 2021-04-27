@@ -1,14 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: app-sync
+  name: update-modules
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
-      serviceAccountName: sa-rollouts
       restartPolicy: Never
       containers:
       - name: modules-installer
@@ -29,13 +28,6 @@ spec:
         - name: modules-volume
           mountPath: /mnt/Modules
           readOnly: false
-      - name: argo-rollout
-        image: kkisilevsky/argo-kubectl-rollouts:latest
-        command:
-          - "bin/bash"
-          - "-c"
-        args:
-          - "kubectl argo rollouts pause saas-platform -n dev"
       volumes:
       - name: modules-volume
         persistentVolumeClaim:

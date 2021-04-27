@@ -15,4 +15,5 @@ configMapGenerator:
 resources:
 - modules-pvc.yaml
 - sync-hook.yaml
+- presync-hook.yaml
 - rbac.yaml
