@@ -2,23 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 namespace: dev
-namePrefix: saas-
+namePrefix: saas-a-
 commonLabels:
-  instance: saas
-
-
-patchesStrategicMerge:
-- platform-deploy.yaml
-- platform-cm.yaml
-- platform-secrets.yaml
+  instance: saas-a
 
 resources:
-- ../../../common-base/saas-platform
-
-images:
-- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newTag: 3.49.0-master-182936ca
+- ../resources
 
 configMapGenerator:
 - name: db-config

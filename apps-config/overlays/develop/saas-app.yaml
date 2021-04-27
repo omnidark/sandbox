@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: saas
+  name: saas-a
   namespace: argocd
   labels:
     workflow: managed
@@ -15,7 +15,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tenant
   source:
-    path: saas/overlays/dev
+    path: saas/overlays/saas-a
     repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
   syncPolicy:
