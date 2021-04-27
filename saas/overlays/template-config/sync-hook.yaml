@@ -8,6 +8,7 @@ metadata:
 spec:
   template:
     spec:
+      serviceAccountName: sa-rollouts
       restartPolicy: Never
       containers:
       - name: modules-installer
@@ -28,6 +29,13 @@ spec:
         - name: modules-volume
           mountPath: /mnt/Modules
           readOnly: false
+      - name: argo-rollout
+        image: kkisilevsky/argo-kubectl-rollouts:latest
+        command:
+          - "bin/bash"
+          - "-c"
+        args:
+          - "kubectl argo rollouts pause saas-platform -n dev"
       volumes:
       - name: modules-volume
         persistentVolumeClaim:
