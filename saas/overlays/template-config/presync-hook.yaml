@@ -17,5 +17,6 @@ spec:
           - "bin/bash"
           - "-c"
         args:
-          - "kubectl argo rollouts pause saas-platform -n dev"
+          - "kubectl get rollout -n dev -l template=saas-template | awk '{ print $1 }' | tail -n+2 > rollouts
+          && while read p; do kubectl argo rollouts pause -n dev $p; done < rollouts"
   backoffLimit: 2
