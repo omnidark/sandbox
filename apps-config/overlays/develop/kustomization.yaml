@@ -2,4 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - saas-app.yaml
+  - saas-app-b.yaml
+  #- saas-app-c.yaml
   - saas-template-config.yaml
