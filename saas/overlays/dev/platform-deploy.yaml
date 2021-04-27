@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         saas-app: saas-dev
-        updated: done
+        updated: suspend
       annotations:
         vault.hashicorp.com/agent-init-first: "true"
         vault.hashicorp.com/agent-configmap: "saas-platform-secret-configmap"
