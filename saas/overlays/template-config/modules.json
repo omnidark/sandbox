@@ -163,10 +163,5 @@
     "Id": "VirtoCommerce.ExperienceApi",
     "Repository": "VirtoCommerce/vc-module-experience-api",
     "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/1.4.0/VirtoCommerce.ExperienceApi_1.4.0.zip"
-  },
-  {
-    "Id": "VirtoCommerce.FeatureManagement",
-    "Repository": "VirtoCommerce/vc-module-feature-flags",
-    "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.FeatureManagement_3.0.0-preview.1.zip"
   }
 ] 
