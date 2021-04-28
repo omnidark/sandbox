@@ -16,5 +16,4 @@ resources:
 - modules-pvc.yaml
 - sync-hook.yaml
 - presync-hook.yaml
-- postsync-hook.yaml
 - rbac.yaml

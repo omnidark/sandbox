@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       restartPolicy: Never
-      containers:
+      initContainers:
       - name: modules-installer
         image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
         env:
@@ -28,6 +28,18 @@ spec:
         - name: modules-volume
           mountPath: /mnt/Modules
           readOnly: false
+      containers:
+      - name: sync
+        image: curlimages/curl
+        command:
+          - "curl"
+          - "-d"
+          - "{\"label\":\"saas-template\"}"
+          - "-H"
+          - "Content-Type: application/json"
+          - "-X"
+          - "POST"
+          - "http://webhook-eventsource-svc.argo.svc.cluster.local:12000/saas-postsync"
       volumes:
       - name: modules-volume
         persistentVolumeClaim:
