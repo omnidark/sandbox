@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         saas-app: saas-dev
-        updated: new-version
+        updated: new-version-2
       annotations:
         vault.hashicorp.com/agent-init-first: "true"
         vault.hashicorp.com/agent-configmap: "saas-a-platform-secret-configmap"
