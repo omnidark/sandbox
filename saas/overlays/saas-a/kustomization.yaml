@@ -5,6 +5,7 @@ namespace: dev
 namePrefix: saas-a-
 commonLabels:
   instance: saas-a
+  ogogo: nuok
 
 resources:
 - ../resources
