@@ -18,10 +18,6 @@ spec:
     path: saas/overlays/saas-a
     repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
-    plugin:
-      env:
-        - name: TEST_FOO
-          value: bar
   syncPolicy:
     automated:
       prune: true
