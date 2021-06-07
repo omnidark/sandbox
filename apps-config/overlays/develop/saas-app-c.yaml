@@ -18,8 +18,6 @@ spec:
     path: saas/overlays/saas-c
     repoURL: https://github.com/omnidark/sandbox
     targetRevision: HEAD
-    kustomize:
-      version: v3.5.4
   syncPolicy:
     automated:
       prune: true
