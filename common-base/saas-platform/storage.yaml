@@ -22,5 +22,4 @@ spec:
   resources:
     requests:
       storage: 200Mi
-  volumeName: cms-content
   storageClassName: "rook-nfs-share-delete"
