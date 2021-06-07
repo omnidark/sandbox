@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        updated: new-version-4-$(VC_INSTANCE)
+        updated: new-version-4
       annotations:
         vault.hashicorp.com/agent-init-first: "true"
         vault.hashicorp.com/agent-configmap: "$(VC_INSTANCE)-platform-secret-configmap"
