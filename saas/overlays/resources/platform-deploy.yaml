@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        updated: new-version-4
+        updated: new-version-4-$(VC_INSTANCE)
       annotations:
         vault.hashicorp.com/agent-init-first: "true"
-        vault.hashicorp.com/agent-configmap: "saas-a-platform-secret-configmap"
+        vault.hashicorp.com/agent-configmap: "$(VC_INSTANCE)-platform-secret-configmap"
         vault.hashicorp.com/agent-requests-cpu: "25m"
         vault.hashicorp.com/agent-limits-cpu: "55m"
         vault.hashicorp.com/agent-inject: "true"
