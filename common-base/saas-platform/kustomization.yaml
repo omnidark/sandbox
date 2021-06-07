@@ -32,4 +32,4 @@ vars:
     name: platform
     apiVersion: v1
   fieldref:
-    fieldpath: metadata.labels['instance']
+    fieldpath: metadata.labels.instance

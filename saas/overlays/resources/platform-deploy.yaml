@@ -10,7 +10,6 @@ spec:
   template:
     metadata:
       labels:
-        saas-app: saas-dev
         updated: new-version-4
       annotations:
         vault.hashicorp.com/agent-init-first: "true"
@@ -34,10 +33,10 @@ spec:
             podAffinityTerm:
               labelSelector:
                 matchExpressions:
-                - key: saas-app
+                - key: instance
                   operator: In
                   values:
-                  - saas-dev
+                  - $(VC_INSTANCE)
               topologyKey: topology.kubernetes.io/zone
       containers:
         - name: saas-platform
