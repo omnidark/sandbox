@@ -19,6 +19,9 @@ configMapGenerator:
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
+- name: test-config
+  literals:
+    - TEST_ENV=$(VAULT_API_URL)
 
 patches:
 - patch: |-
