@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   # - saas-app.yaml
   # - saas-app-b.yaml
-  - saas-app-c.yaml
+  #- saas-app-c.yaml
   # - saas-template-config.yaml
