@@ -14,3 +14,4 @@ resources:
 - sync-hook.yaml
 #- presync-hook.yaml
 - rbac.yaml
+- error-page.yaml
