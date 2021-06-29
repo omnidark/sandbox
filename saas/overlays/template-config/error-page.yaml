@@ -17,6 +17,7 @@ spec:
         image: kkisilevsky/nginx_error_page
         ports:
         - containerPort: 80
+        volumeMounts:
         - mountPath: "/mnt/modules"
           name: modules
       volumes:
