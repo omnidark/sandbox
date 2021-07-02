@@ -4,4 +4,5 @@ resources:
   #- saas-app.yaml
   # - saas-app-b.yaml
   #- saas-app-c.yaml
+  - error-page.yaml
   - saas-template-config.yaml
